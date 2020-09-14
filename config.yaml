@@ -29,6 +29,11 @@ Params:
   toc: false
   pager: true
   sidebar: "right"
+  mainSections:
+   - kubernetes
+   - linux
+   - networking
+   - others
   post_meta:
     - author
     - date
