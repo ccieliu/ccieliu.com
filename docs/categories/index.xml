@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2020 01:29:58 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 01:35:03 +0800</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>/categories/kubernetes/</link>
+      <pubDate>Tue, 15 Sep 2020 01:35:03 +0800</pubDate>
+      
+      <guid>/categories/kubernetes/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Linux</title>
@@ -26,15 +35,6 @@
       <pubDate>Mon, 14 Sep 2020 21:44:10 +0800</pubDate>
       
       <guid>/categories/others/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>/categories/kubernetes/</link>
-      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/kubernetes/</guid>
       <description></description>
     </item>
     

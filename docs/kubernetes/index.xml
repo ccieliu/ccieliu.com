@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</title>
-    <link>/</link>
-    <description>Recent content on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</description>
+    <title>Kubernetes on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</title>
+    <link>/kubernetes/</link>
+    <description>Recent content in Kubernetes on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 15 Sep 2020 01:35:03 +0800</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,33 +18,6 @@
       
       <guid>/kubernetes/kubectl-get/</guid>
       <description>kubectl 基本操作  开启kubectl 自动补全 [root@docker-host0 ~] yum install bash-completion bash-completion-extras [root@docker-host0 ~] source &amp;lt;(kubectl completion bash) 查看cluster状态 [root@docker-host0 ~]# kubectl cluster-info Kubernetes master is running at https://192.168.99.103:8443 KubeDNS is running at https://192.168.99.103:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy To further debug and diagnose cluster problems, use &amp;#39;kubectl cluster-info dump&amp;#39;. 查看node [root@docker-host0 ~]# kubectl get nodes NAME STATUS ROLES AGE VERSION minikube Ready master 21h v1.14.0 [root@docker-host0 ~]# kubectl get nodes -o wide NAME STATUS ROLES AGE VERSION INTERNAL-IP EXTERNAL-IP OS-IMAGE KERNEL-VERSION CONTAINER-RUNTIME minikube Ready master 21h v1.</description>
-    </item>
-    
-    <item>
-      <title>Linux Shell Redirect</title>
-      <link>/linux/linux-shell-redirect/</link>
-      <pubDate>Tue, 15 Sep 2020 01:29:58 +0800</pubDate>
-      
-      <guid>/linux/linux-shell-redirect/</guid>
-      <description>Linux shell 输出 输入 错误  以及各种重定向.</description>
-    </item>
-    
-    <item>
-      <title>Linux Read Command</title>
-      <link>/linux/linux-read-command/</link>
-      <pubDate>Tue, 15 Sep 2020 01:03:21 +0800</pubDate>
-      
-      <guid>/linux/linux-read-command/</guid>
-      <description>Linux shell 用 &amp;ldquo;read&amp;rdquo; 输入 读取 标准输出 或 文件。</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>/others/hello-world/</link>
-      <pubDate>Mon, 14 Sep 2020 21:44:10 +0800</pubDate>
-      
-      <guid>/others/hello-world/</guid>
-      <description>Back to blog.</description>
     </item>
     
   </channel>
