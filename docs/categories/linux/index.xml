@@ -6,10 +6,19 @@
     <description>Recent content in Linux on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2020 01:03:21 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 01:29:58 +0800</lastBuildDate>
     
 	<atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Linux Shell Redirect</title>
+      <link>/linux/linux-shell-redirect/</link>
+      <pubDate>Tue, 15 Sep 2020 01:29:58 +0800</pubDate>
+      
+      <guid>/linux/linux-shell-redirect/</guid>
+      <description>Linux shell 输出 输入 错误  以及各种重定向.</description>
+    </item>
     
     <item>
       <title>Linux Read Command</title>

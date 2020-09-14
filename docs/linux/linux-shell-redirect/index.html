@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Linux Shell Redirect - Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+		<meta property="og:title" content="Linux Shell Redirect" />
+<meta property="og:description" content="Linux shell 输出 输入 错误  以及各种重定向." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/linux/linux-shell-redirect/" />
+<meta property="article:published_time" content="2020-09-15T01:29:58+08:00" />
+<meta property="article:modified_time" content="2020-09-15T01:29:58+08:00" />
+
+		<meta itemprop="name" content="Linux Shell Redirect">
+<meta itemprop="description" content="Linux shell 输出 输入 错误  以及各种重定向.">
+<meta itemprop="datePublished" content="2020-09-15T01:29:58+08:00" />
+<meta itemprop="dateModified" content="2020-09-15T01:29:58+08:00" />
+<meta itemprop="wordCount" content="584">
+
+
+
+<meta itemprop="keywords" content="" />
+
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container header__container">
+		
+	<div class="logo">
+		<a class="logo__link" href="/" title="Yuxuan Liu&#39;s Blog" rel="home">
+			<div class="logo__item logo__text">
+					<div class="logo__title">Yuxuan Liu&#39;s Blog</div>
+					<div class="logo__tagline">Everything Here.</div>
+				</div>
+		</a>
+	</div>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">index</span>
+				
+			</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/about/">
+				
+				<span class="menu__text">About Me</span>
+				
+			</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Linux Shell Redirect</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-15T01:29:58&#43;08:00">2020-09-15</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/linux/" rel="category">Linux</a>
+	</span>
+</div></div>
+		</header><div class="content post__content clearfix">
+			<h3 id="shell-重定向">Shell 重定向</h3>
+<p>输出 输入 错误  以及各种重定向</p>
+<hr>
+<p>[TOC]</p>
+<h4 id="输入-输出-重定向">输入 输出 重定向</h4>
+<h5 id="overview-标准-输入输出错误">overview 标准 输入/输出/错误</h5>
+<ul>
+<li>0 标准输入 默认 键盘 为 标准输入 // stdin</li>
+<li>1 标准输出 默认 屏幕 为 标准输出 // stdout</li>
+<li>2 标准错误 默认 屏幕 为 标准错误 // stderr</li>
+</ul>
+<h5 id="标准-输入">标准 输入</h5>
+<ul>
+<li>默认的输入方式</li>
+<li>数字0来表示标准输入</li>
+<li>别名 stdin</li>
+<li>默认设备是键盘</li>
+<li>重定向操作符是 “&lt;”</li>
+</ul>
+<pre><code class="language-mermaid" data-lang="mermaid">graph TD
+A[demo.txt] --&gt; |标准输入0| B(cat)
+B --&gt; |标准输出1| C[屏幕]
+B --&gt; |标准错误2| D[屏幕]
+</code></pre><p>输入演示：</p>
+<pre><code>[root@host1-docker tmpdir]#cat &lt; demo.txt 
+line1a line1b line1c
+line2a line2b line2c
+line3a line3b line3c
+line4a line4b line4c
+line5a line5b line5c
+</code></pre><h5 id="标准-输出">标准 输出</h5>
+<ul>
+<li>默认的输出方式</li>
+<li>数字1表示标准输出</li>
+<li>别名sdtout</li>
+<li>默认设备是屏幕</li>
+<li>重定向操作符“&gt;”</li>
+</ul>
+<pre><code class="language-mermaid" data-lang="mermaid">graph TD
+A[键盘] --&gt; |标准输入0| B(cat)
+B --&gt; |标准输出1| C[test.txt]
+B --&gt; |标准错误2| D[屏幕]
+</code></pre><p><strong>演示输出：</strong>
+以下演示，相当于：
+<code>ls -lha 1&gt; test.txt</code>
+标准输出会重定向。</p>
+<pre><code>[root@host1-docker tmpdir]#ls -lha &gt; test.txt
+[root@host1-docker tmpdir]#cat test.txt 
+total 96K
+drwxr-xr-x 2 root root 4.0K Dec  4 14:03 ./
+drwxr-xr-x 3 root root  109 Nov 22 13:47 ../
+-rwxr--r-- 1 root root  199 Nov 26 14:49 checkpass.sh*
+-rwxr--r-- 1 root root  105 Dec  4 13:09 demo.txt*
+-rwxr--r-- 1 root root   65 Dec  2 21:08 echo.sh*
+</code></pre><h5 id="标准-错误">标准 错误</h5>
+<ul>
+<li>默认的错误输出方式</li>
+<li>数字2表示标准错误</li>
+<li>别名sdterr</li>
+<li>默认设备是屏幕</li>
+<li>重定向操作符和标准输出一样，也是“&gt;”</li>
+</ul>
+<pre><code class="language-mermaid" data-lang="mermaid">graph TD
+A[键盘] --&gt; |标准输入0| B(more)
+B --&gt; |标准输出1| C[屏幕]
+B --&gt; |标准错误2| D[error.txt]
+</code></pre><p><strong>演示输出：</strong>
+以下演示，相当于：
+<code>more 1.txt 2&gt;error.txt</code></p>
+<pre><code>[root@host1-docker tmpdir]#more 1.txt
+1.txt: No such file or directory
+[root@host1-docker tmpdir]#more 1.txt 2&gt; error.txt
+[root@host1-docker tmpdir]#more error.txt 
+1.txt: No such file or directory
+</code></pre><h5 id="重定向原理分析">重定向原理分析</h5>
+<p>操作符&gt;在命令的使用中，改变了 <code>文件描述</code> 的输出指向。
+正常情况下，默认输出和错误  都指向的 sdtout和sdterr。
+但是操作符改变了<code>文件描述</code> 的输出位置，比如将<strong>标准输出</strong> 的位置改到了一个文件，即为标准输出重定向。
+再或者，修改了<strong>标准错误</strong> 的位置，即为标准错误重定向。可以是文件，也可以是任何地方。
+<strong>另外：</strong>
+举例<code>echo &quot;test&quot; &gt; 1.txt</code>
+默认情况下bash并不知道1.txt是否存在。
+只是单纯的尝试打开这个文件，如果这个文件存在，则清空文件。等待写入。
+如果这个文件不存在，则创建一个空文件。等待写入。（以便文件描述的输出位置指向这个文件）</p>
+<pre><code>[root@host1-docker tmpdir]#more null.txt &gt; nu.txt
+null.txt: No such file or directory
+[root@host1-docker tmpdir]#ls nu.txt 
+nu.txt
+[root@host1-docker tmpdir]#more nu.txt 
+[root@host1-docker tmpdir]#
+</code></pre><h5 id="重定向-整个重定向的输出">重定向 整个重定向的输出</h5>
+<p>在循环上重定向。循环中所有的stderr都做重定向。
+注：这里使用了双重重定向，避免每次重定向时，文件被清空。</p>
+<pre><code>#!/bin/bash -
+for dir in $@
+do
+        find / -name &quot;*.tmp&quot; --exec rm -rf {} \;
+done 2&gt;&gt;error.log
+</code></pre><h5 id="文件的逐行处理">文件的逐行处理</h5>
+<pre><code>#!/bin/bash -
+[ $# -ne 1 ] &amp;&amp; echo &quot;Please use `basename $0` FILENAME&quot; &amp;&amp; exit 1
+
+filename=$1
+
+sqn=0
+
+while read line
+do
+	let sqn++
+	echo &quot;$sqn $line&quot;
+done &lt; $filename
+
+echo -e &quot;\n Total $sqn lines read.&quot;
+
+exit 0
+</code></pre><h5 id="从标准输入读取输入内容">从标准输入读取输入内容</h5>
+<p>常用与 grep sed tr 这种过滤程序</p>
+<h6 id="here-documents"><strong>here-documents</strong></h6>
+<pre><code>#!/bin/bash -
+tr a-z A-Z &lt;&lt;EOF
+        aaa bbb ccc
+        ddd eee fff
+EOF
+
+tr a-z A-Z &lt;&lt;-EOF
+        aaa bbb ccc
+        ddd eee fff
+EOF
+</code></pre><h6 id="here-strings"><strong>here-strings</strong></h6>
+<pre><code>[root@host1-docker tmpdir]#tr a-z A-Z &lt;&lt;&lt; &quot;aaa bbb ccc&quot;
+AAA BBB CCC
+[root@host1-docker tmpdir]#tr a-z A-Z &lt;&lt;&lt; aaa
+AAA
+</code></pre><pre><code>[root@host1-docker tmpdir]#tr a-z A-Z &lt;&lt;&lt; &quot;aaa bbb ccc
+&gt; ddd eee fff&quot;
+AAA BBB CCC
+DDD EEE FFF
+</code></pre><h5 id="创建一个空文件">创建一个空文件</h5>
+<pre><code>[root@host1-docker tmpdir]#&gt;testNullfile
+[root@host1-docker tmpdir]#ls -lh testN*
+-rw-r--r-- 1 root root 0 Dec  6 15:45 testNullfile
+</code></pre><h5 id="丢弃-devnull-的几种用法">丢弃 /dev/null 的几种用法</h5>
+<p>重定向标准输出1 到 /dev/null</p>
+<pre><code>[root@host1-docker tmpdir]#more /etc/passwd &gt; /dev/null
+[root@host1-docker tmpdir]#more /etc/passwd 1&gt; /dev/null
+</code></pre><p>重定向标准错误 到 /dev/null</p>
+<pre><code>[root@host1-docker tmpdir]#more test
+test: No such file or directory
+[root@host1-docker tmpdir]#more test 2&gt; /dev/null 
+[root@host1-docker tmpdir]#
+</code></pre><h6 id="与--和--一同使用">与 &amp;&amp; 和 || 一同使用</h6>
+<p>重定向 标准输入 和 标准输出</p>
+<pre><code>command &amp;&gt; /dev/null
+command &gt;&amp; /dev/null
+command 2&gt;&amp;1 &gt; /dev/null
+command  &gt;  /dev/null 2&gt;&amp;1
+</code></pre><pre><code>[root@host1-docker tmpdir]#grep root /etc/passwd &amp;&gt; /dev/null &amp;&amp; echo 'Yes.' || echo 'No!!'
+Yes.
+
+[root@host1-docker tmpdir]#grep test /etc/passwd &amp;&gt; /dev/null &amp;&amp; echo &quot;Yes.&quot; || echo 'No!!'
+No!!
+</code></pre><h6 id="重定向-追加">重定向 追加</h6>
+<pre><code>[root@host1-docker tmpdir]#more test 2&gt;&gt;err.log
+
+[root@host1-docker tmpdir]#more err.log 
+test: No such file or directory
+
+[root@host1-docker tmpdir]#more foo 2&gt;&gt;err.log
+
+[root@host1-docker tmpdir]#more err.log 
+test: No such file or directory
+foo: No such file or directory
+[root@host1-docker tmpdir]#
+</code></pre><h6 id="执行其他脚本时-进行重定向-可以重定向任何-流">执行其他脚本时 进行重定向 可以重定向任何 流</h6>
+<p>例如</p>
+<pre><code>[root@host1-docker tmpdir]#./test.py 2&gt; err.log 
+[root@host1-docker tmpdir]#more err.log 
+-bash: ./test.py: No such file or directory
+</code></pre><h5 id="从文件输入-并从文件输出">从文件输入 并从文件输出</h5>
+<pre><code>[root@host1-docker tmpdir]#more demo.txt 
+line1a line1b line1c
+line2a line2b line2c
+line3a line3b line3c
+line4a line4b line4c
+line5a line5b line5c
+
+[root@host1-docker tmpdir]#tr a-z A-Z &lt; demo.txt &gt; demo.txt.output
+
+[root@host1-docker tmpdir]#more demo.txt.output 
+LINE1A LINE1B LINE1C
+LINE2A LINE2B LINE2C
+LINE3A LINE3B LINE3C
+LINE4A LINE4B LINE4C
+LINE5A LINE5B LINE5C
+</code></pre>
+		</div>
+	</article>
+</main>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/linux/linux-read-command/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Linux Read Command</p>
+		</a>
+	</div>
+</nav>
+
+
+			</div>
+			
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2020 Yuxuan Liu.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
+</body>
+</html>
