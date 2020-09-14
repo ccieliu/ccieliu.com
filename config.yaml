@@ -4,7 +4,7 @@ languageCode: en-us
 paginate: '10'
 theme: mainroad
 disqusShortname: ''
-publishdir: "../ccieliu.github.io/"
+publishdir: "docs"
 #Author:
 #  name: Bruce Liu
 #  bio: >-
