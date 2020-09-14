@@ -1,0 +1,77 @@
+baseurl: /
+title: 'Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking'
+languageCode: en-us
+paginate: '10'
+theme: mainroad
+disqusShortname: ''
+publishdir: "../ccieliu.github.io/"
+#Author:
+#  name: Bruce Liu
+#  bio: >-
+#    Everything Here.
+#  avatar: img/avatar.jpg
+menu:
+  main:
+  - name: About Me
+    url: /about/
+    weight: 2
+  - name: index
+    url: /
+    weight: 1
+Params:
+  subtitle: ''
+  description: Yuxuan Liu's Blog
+  copyright: Yuxuan Liu
+  opengraph: true
+  schema: true
+  readmore: false
+  authorbox: false
+  toc: false
+  pager: true
+  sidebar: "right"
+  post_meta:
+    - author
+    - date
+    - categories
+  dateformat: '2006-01-02'
+  mathjax: true
+  mathjaxPath: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js'
+  mathjaxConfig: TeX-AMS-MML_HTMLorMML
+  googleFontsLink: 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700'
+  highlightColor: ''
+  customCSS:
+    - css/custom.css
+  customJS:
+    - js/custom.js
+  style:
+    vars:
+      highlightColor: '#e22d30'
+      fontFamilyPrimary: '''Open Sans'', Helvetica, Arial, sans-serif'
+      fontFamilySecondary: >-
+        SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier
+        New', monospace
+  logo:
+#    image: img/avatar.jpg
+    title: Yuxuan Liu's Blog
+    subtitle: Everything Here.
+  sidebar:
+    home: right
+    list: right
+    single: false
+    widgets:
+      - search
+      - categories
+      - recent
+#      - taglist
+      - social
+#      - languages
+  widgets:
+    recent_num: 5
+    tags_counter: false
+    social:
+      linkedin: bruce-liu-9165aa17b
+      github: ccieliu
+      email: ccieliu@gmail.com
+#      custom:
+#        - title: My Home Page
+#          url: 'http://example.com'
