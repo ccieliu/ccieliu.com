@@ -2,6 +2,7 @@
 title: "Linux Read Command"
 date: 2020-09-15T01:03:21+08:00
 draft: true
+summary: Linux shell 用 "read" 输入 读取 标准输出 或 文件。
 categories:
   - "Linux"
 ---
