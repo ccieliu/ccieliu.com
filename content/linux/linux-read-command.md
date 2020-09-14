@@ -2,6 +2,8 @@
 title: "Linux Read Command"
 date: 2020-09-15T01:03:21+08:00
 draft: true
+categories:
+  - "Linux"
 ---
 
 ### read 输入

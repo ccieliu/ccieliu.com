@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</title>
-    <link>/categories/linux/</link>
-    <description>Recent content in Linux on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</description>
+    <title>Linuxes on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</title>
+    <link>/linux/</link>
+    <description>Recent content in Linuxes on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 15 Sep 2020 01:03:21 +0800</lastBuildDate>
     
-	<atom:link href="/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -22,15 +22,6 @@
 -p 选项 弹出提示符。其他的参数会一次赋值。例如下：
 [root@host1-docker tmpdir]#read -p &amp;quot;Please input some things: &amp;quot; a b c Please input some things: aaa bbb ccc [root@host1-docker tmpdir]#echo $aaa [root@host1-docker tmpdir]#echo $a aaa [root@host1-docker tmpdir]#echo $b bbb [root@host1-docker tmpdir]#echo $c ccc -s 选项 用于密码 输入无回显，通常用于用户输入密码。 但是-s可能会导致下一个read在同行显示。 workaround: 单独echo一次即可，例如
 read -s -p &amp;quot;Please input your name: &amp;quot; myname ; echo 匹配默认值，互交界面 #!/bin/bash - read -p &amp;quot;Please input your name: &amp;quot; myname read -p &amp;quot;Please input your email: &amp;quot; myemail while true do read -p &amp;quot;Display all information:[Y]/n&amp;quot; input case $input in [yY] | &amp;quot;&amp;quot;) echo &amp;quot;Your name is $myname&amp;quot; echo &amp;quot;Your email address is $myemail&amp;quot; exit 0 ;; [nN]) echo &amp;quot;Okay.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description></description>
     </item>
     
   </channel>

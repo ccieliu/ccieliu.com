@@ -11,7 +11,7 @@
 <meta property="og:description" content="Yuxuan Liu&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/categories/linux/" />
-<meta property="og:updated_time" content="2017-08-21T00:00:00+00:00" />
+<meta property="og:updated_time" content="2020-09-15T01:03:21+08:00" />
 
 		<meta itemprop="name" content="Linux">
 <meta itemprop="description" content="Yuxuan Liu&#39;s Blog">
@@ -75,6 +75,26 @@
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
+			<a href="/linux/linux-read-command/" rel="bookmark">
+			Linux Read Command
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-15T01:03:21&#43;08:00">2020-09-15</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/linux/" rel="category">Linux</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		read 输入 用read 输入 读取 标准输出 或 文件。
+ [TOC]
+-p 选项 弹出提示符。其他的参数会一次赋值。例如下：
+[root@host1-docker tmpdir]#read -p &quot;Please input some things: &quot; a b c Please input some things: aaa bbb ccc [root@host1-docker tmpdir]#echo $aaa [root@host1-docker tmpdir]#echo $a aaa [root@host1-docker tmpdir]#echo $b bbb [root@host1-docker tmpdir]#echo $c ccc -s 选项 用于密码 输入无回显，通常用于用户输入密码。 但是-s可能会导致下一个read在同行显示。 workaround: 单独echo一次即可，例如
+read -s -p &quot;Please input your name: &quot; myname ; echo 匹配默认值，互交界面 #!/bin/bash - read -p &quot;Please input your name: &quot; myname read -p &quot;Please input your email: &quot; myemail while true do read -p &quot;Display all information:[Y]/n&quot; input case $input in [yY] | &quot;&quot;) echo &quot;Your name is $myname&quot; echo &quot;Your email address is $myemail&quot; exit 0 ;; [nN]) echo &quot;Okay.
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
 			<a href="/about/" rel="bookmark">
 			About
 			</a>
@@ -126,7 +146,7 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/others/hello-world/">Hello World</a></li>
+			<li class="widget__item"><a class="widget__link" href="/linux/linux-read-command/">Linux Read Command</a></li>
 		</ul>
 	</div>
 </div>
