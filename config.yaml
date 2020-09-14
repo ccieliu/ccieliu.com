@@ -5,11 +5,11 @@ paginate: '10'
 theme: mainroad
 disqusShortname: ''
 publishdir: "docs"
-#Author:
-#  name: Bruce Liu
-#  bio: >-
-#    Everything Here.
-#  avatar: img/avatar.jpg
+Author:
+  name: Bruce Liu
+  bio: >-
+    Everything Here.
+  avatar: img/avatar.jpg
 menu:
   main:
   - name: About Me
@@ -25,7 +25,7 @@ Params:
   opengraph: true
   schema: true
   readmore: false
-  authorbox: false
+  authorbox: true
   toc: false
   pager: true
   sidebar: "right"
