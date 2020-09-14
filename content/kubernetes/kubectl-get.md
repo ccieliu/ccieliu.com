@@ -2,6 +2,7 @@
 title: "Kubectl Get"
 date: 2020-09-15T01:35:03+08:00
 draft: true
+Summary: Kubectl get 相关lab测试与集锦
 categories:
   - "Kubernetes"
 ---

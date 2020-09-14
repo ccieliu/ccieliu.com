@@ -17,7 +17,7 @@
       <pubDate>Tue, 15 Sep 2020 01:35:03 +0800</pubDate>
       
       <guid>/kubernetes/kubectl-get/</guid>
-      <description>kubectl 基本操作  开启kubectl 自动补全 [root@docker-host0 ~] yum install bash-completion bash-completion-extras [root@docker-host0 ~] source &amp;lt;(kubectl completion bash) 查看cluster状态 [root@docker-host0 ~]# kubectl cluster-info Kubernetes master is running at https://192.168.99.103:8443 KubeDNS is running at https://192.168.99.103:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy To further debug and diagnose cluster problems, use &amp;#39;kubectl cluster-info dump&amp;#39;. 查看node [root@docker-host0 ~]# kubectl get nodes NAME STATUS ROLES AGE VERSION minikube Ready master 21h v1.14.0 [root@docker-host0 ~]# kubectl get nodes -o wide NAME STATUS ROLES AGE VERSION INTERNAL-IP EXTERNAL-IP OS-IMAGE KERNEL-VERSION CONTAINER-RUNTIME minikube Ready master 21h v1.</description>
+      <description>Kubectl get 相关lab测试与集锦</description>
     </item>
     
   </channel>
