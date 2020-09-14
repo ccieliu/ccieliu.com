@@ -168,7 +168,7 @@ B --&gt; |标准错误2| D[error.txt]
 但是操作符改变了<code>文件描述</code> 的输出位置，比如将<strong>标准输出</strong> 的位置改到了一个文件，即为标准输出重定向。
 再或者，修改了<strong>标准错误</strong> 的位置，即为标准错误重定向。可以是文件，也可以是任何地方。
 <strong>另外：</strong>
-举例<code>echo &quot;test&quot; &gt; 1.txt</code>
+举例<code>echo &quot;test&quot; &gt; 1.txt</code> 
 默认情况下bash并不知道1.txt是否存在。
 只是单纯的尝试打开这个文件，如果这个文件存在，则清空文件。等待写入。
 如果这个文件不存在，则创建一个空文件。等待写入。（以便文件描述的输出位置指向这个文件）</p>
