@@ -87,8 +87,7 @@
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		read 输入 用read 输入 读取 标准输出 或 文件。
- [TOC]
--p 选项 弹出提示符。其他的参数会一次赋值。例如下：
+ -p 选项 弹出提示符。其他的参数会一次赋值。例如下：
 [root@host1-docker tmpdir]#read -p &quot;Please input some things: &quot; a b c Please input some things: aaa bbb ccc [root@host1-docker tmpdir]#echo $aaa [root@host1-docker tmpdir]#echo $a aaa [root@host1-docker tmpdir]#echo $b bbb [root@host1-docker tmpdir]#echo $c ccc -s 选项 用于密码 输入无回显，通常用于用户输入密码。 但是-s可能会导致下一个read在同行显示。 workaround: 单独echo一次即可，例如
 read -s -p &quot;Please input your name: &quot; myname ; echo 匹配默认值，互交界面 #!/bin/bash - read -p &quot;Please input your name: &quot; myname read -p &quot;Please input your email: &quot; myemail while true do read -p &quot;Display all information:[Y]/n&quot; input case $input in [yY] | &quot;&quot;) echo &quot;Your name is $myname&quot; echo &quot;Your email address is $myemail&quot; exit 0 ;; [nN]) echo &quot;Okay.
 	</div>
