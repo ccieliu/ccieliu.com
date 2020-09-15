@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>About on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</title>
-    <link>/tags/about/</link>
-    <description>Recent content in About on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</description>
+    <title>Linux on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in Linux on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 14 Sep 2020 21:44:10 +0800</lastBuildDate>
     
-	<atom:link href="/tags/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>

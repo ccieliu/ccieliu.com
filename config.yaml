@@ -67,12 +67,12 @@ Params:
       - search
       - categories
       - recent
-#      - taglist
+      - taglist
       - social
 #      - languages
   widgets:
     recent_num: 5
-    tags_counter: false
+    tags_counter: true
     social:
       linkedin: bruce-liu-9165aa17b
       github: ccieliu
