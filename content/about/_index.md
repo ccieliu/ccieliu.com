@@ -1,5 +1,5 @@
 ---
-# title: ""
+title: "About Me"
 date: "2017-08-21"
 # description: "Example article description"
 categories:
@@ -9,7 +9,6 @@ categories:
   - "Networking"
 ---
 
-## About
 Yuxuan Liu. (Bruce Liu)
 
 ## Experience
