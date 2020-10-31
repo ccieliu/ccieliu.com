@@ -1,7 +1,7 @@
 ---
 title: "About Me"
 date: "2017-08-21"
-# description: "Example article description"
+Summary: "About me"
 categories:
   - "Others"
   - "Linux"
