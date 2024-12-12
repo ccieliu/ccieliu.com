@@ -4,10 +4,10 @@ date: 2020-09-15T02:48:53+08:00
 draft: true
 Summary: Kubernetes EndPoint 详解。
 categories:
-  - "Kubernetes"
+  - "kubernetes"
 ---
 
-#### What's Endpoint
+## What's Endpoint
 * Service和Pod 并没有直接相连。
 * Service和Pod 之间还有个Endpoint资源
 * Endpoint 就是 Pod暴露服务的IP和port的对应关系。
@@ -15,7 +15,7 @@ categories:
 * 如果创建了一个service且不包含pod selector，则需要手动创建Endpoint资源。（如果有pod selector，Endpoint默认会自动创建的）
 * 这里其实可以创建external service。
 
-##### 关于服务/外部服务的问题
+### 关于服务/外部服务的问题
   * external  service可以利用k8s的负载均衡和服务发现功能
   * external service不包含nodeselector，创建service之后直接创建Endpoint来指定地址和port的信息。
   
@@ -39,7 +39,7 @@ Endpoints:         172.17.0.10:8080,172.17.0.8:8080,172.17.0.9:8080
 Session Affinity:  None
 Events:            <none>
 ```
-#### 手动创建Endpoint
+## 手动创建Endpoint
 ```yaml
 apiVersion: v1
 kind: Endpoints
@@ -54,21 +54,21 @@ subsets:
 ```
 * 为了方便内部Pod访问外部服务，完全可以在k8s中创建一个服务，关联Endpoint来暴露外部服务
 * 效果图如下所示：
-![cc6e23a557ce8f2fb7067cc5c6b29b6c.png](/images/cc6e23a557ce8f2fb7067cc5c6b29b6c.png)
-##### Endpoint和service如何关联？
+![cc6e23a557ce8f2fb7067cc5c6b29b6c.png](ep.png)
+### Endpoint和service如何关联？
 * endpoint 的 name必须和service相同，彼此才能关联。
 * 默认情况下service会自动创建一个同名的Endpoint来映射服务和pod的ip port。
 
-#### 为外部服务创建别名（CNAME DNS）
-##### 需求
+## 为外部服务创建别名（CNAME DNS）
+### 需求
 * 例如公网有一个api server 地址为： api.example.com
 * Pods可能会使用这个api server
 * Pods使用这个api server的时候希望使用内部domain(hostname)进行访问
-##### 原理
+### 原理
 * 在k8s的内部dns服务中，添加了一条指向外部服务的cname记录
 * 例如映射 external-api-server到 api.example.com上
 
-##### yaml example:
+### yaml example:
 ```yaml
 apiVersion: v1
 kind: Service
@@ -80,7 +80,7 @@ spec:
   ports:
   - port: 80
 ```
-##### 效果
+### 效果
 * 这时候，Pods可以像使用内部service一样使用这个external service
 * 方便了后续的api地址修改或者替换。
 * 默认情况下

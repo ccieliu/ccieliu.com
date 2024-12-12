@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Linux Read Command - Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</title>
+	<title>Linux Read Command - KUBES, CODE, CHASE</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Linux Read Command" />
-<meta property="og:description" content="Linux shell 用 &ldquo;read&rdquo; 输入 读取 标准输出 或 文件。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/linux/linux-read-command/" />
-<meta property="article:published_time" content="2020-09-15T01:03:21+08:00" />
-<meta property="article:modified_time" content="2020-09-15T01:03:21+08:00" />
+		<meta property="og:url" content="//localhost:1313/linux/linux-read-command/">
+  <meta property="og:site_name" content="KUBES, CODE, CHASE">
+  <meta property="og:title" content="Linux Read Command">
+  <meta property="og:description" content="Linux shell 用 “read” 输入 读取 标准输出 或 文件。">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="linux">
+    <meta property="article:published_time" content="2020-09-15T01:03:21+08:00">
+    <meta property="article:modified_time" content="2020-09-15T01:03:21+08:00">
 
-		<meta itemprop="name" content="Linux Read Command">
-<meta itemprop="description" content="Linux shell 用 &ldquo;read&rdquo; 输入 读取 标准输出 或 文件。">
-<meta itemprop="datePublished" content="2020-09-15T01:03:21+08:00" />
-<meta itemprop="dateModified" content="2020-09-15T01:03:21+08:00" />
-<meta itemprop="wordCount" content="258">
-
-
-
-<meta itemprop="keywords" content="" />
-
+		
+  <meta itemprop="name" content="Linux Read Command">
+  <meta itemprop="description" content="Linux shell 用 “read” 输入 读取 标准输出 或 文件。">
+  <meta itemprop="datePublished" content="2020-09-15T01:03:21+08:00">
+  <meta itemprop="dateModified" content="2020-09-15T01:03:21+08:00">
+  <meta itemprop="wordCount" content="259">
+  <meta itemprop="keywords" content="Linux">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/custom.css">
+	
 
 	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		
 </head>
 <body class="body">
@@ -41,10 +41,10 @@
 	<div class="container header__container">
 		
 	<div class="logo">
-		<a class="logo__link" href="/" title="Yuxuan Liu&#39;s Blog" rel="home">
+		<a class="logo__link" href="/" title="KUBES, CODE, CHASE" rel="home">
 			<div class="logo__item logo__text">
-					<div class="logo__title">Yuxuan Liu&#39;s Blog</div>
-					<div class="logo__tagline">Everything Here.</div>
+					<div class="logo__title">KUBES, CODE, CHASE</div>
+					<div class="logo__tagline">I can approve of those only who seek in tears for happiness.</div>
 				</div>
 		</a>
 	</div>
@@ -57,14 +57,14 @@
 		<li class="menu__item">
 			<a class="menu__link" href="/">
 				
-				<span class="menu__text">index</span>
+				<span class="menu__text">Index</span>
 				
 			</a>
 		</li>
 		<li class="menu__item">
 			<a class="menu__link" href="/about/">
 				
-				<span class="menu__text">About Me</span>
+				<span class="menu__text">About</span>
 				
 			</a>
 		</li>
@@ -81,19 +81,35 @@
 		<header class="post__header">
 			<h1 class="post__title">Linux Read Command</h1>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Bruce Liu</span>
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Bruce Liu(Yu-Xuan Liu)</span>
 </div>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-15T01:03:21&#43;08:00">2020-09-15</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/linux/" rel="category">Linux</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-09-15T01:03:21&#43;08:00">2020-09-15</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/linux/" rel="category">Linux</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
-			<h3 id="read-输入">read 输入</h3>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#read-输入">read 输入</a></li>
+    <li><a href="#-p-选项">-p 选项</a></li>
+    <li><a href="#-s-选项--用于密码">-s 选项  用于密码</a></li>
+    <li><a href="#匹配默认值互交界面">匹配默认值，互交界面</a></li>
+    <li><a href="#read-用于-文件读取-输入">read 用于 文件读取 输入</a></li>
+    <li><a href="#安全的备份变量-并-处理-按行读取的问题">安全的备份变量 并 处理 按行读取的问题</a></li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<h2 id="read-输入">read 输入</h2>
 <p>用read 输入 读取 标准输出 或 文件。</p>
 <hr>
-<h4 id="-p-选项">-p 选项</h4>
+<h2 id="-p-选项">-p 选项</h2>
 <p>弹出提示符。其他的参数会一次赋值。例如下：</p>
-<pre><code>[root@host1-docker tmpdir]#read -p &quot;Please input some things: &quot; a b c
+<pre tabindex="0"><code>[root@host1-docker tmpdir]#read -p &#34;Please input some things: &#34; a b c
 Please input some things: aaa bbb ccc
 [root@host1-docker tmpdir]#echo $aaa
 
@@ -103,29 +119,29 @@ aaa
 bbb
 [root@host1-docker tmpdir]#echo $c
 ccc
-</code></pre><h4 id="-s-选项--用于密码">-s 选项  用于密码</h4>
+</code></pre><h2 id="-s-选项--用于密码">-s 选项  用于密码</h2>
 <p>输入无回显，通常用于用户输入密码。
 但是-s可能会导致下一个read在同行显示。
 workaround:
 单独echo一次即可，例如</p>
-<pre><code>read -s -p &quot;Please input your name: &quot; myname ; echo
-</code></pre><h4 id="匹配默认值互交界面">匹配默认值，互交界面</h4>
-<pre><code>#!/bin/bash -
-read -p &quot;Please input your name: &quot; myname
-read -p &quot;Please input your email: &quot; myemail
+<pre tabindex="0"><code>read -s -p &#34;Please input your name: &#34; myname ; echo
+</code></pre><h2 id="匹配默认值互交界面">匹配默认值，互交界面</h2>
+<pre tabindex="0"><code>#!/bin/bash -
+read -p &#34;Please input your name: &#34; myname
+read -p &#34;Please input your email: &#34; myemail
 
 while true
 do
-	read -p &quot;Display all information:[Y]/n&quot; input
+	read -p &#34;Display all information:[Y]/n&#34; input
 	case $input in
-		[yY] | &quot;&quot;)
-			echo &quot;Your name is $myname&quot;
-			echo &quot;Your email address is $myemail&quot;
+		[yY] | &#34;&#34;)
+			echo &#34;Your name is $myname&#34;
+			echo &#34;Your email address is $myemail&#34;
 			exit 0
 		;;
 
 		[nN])
-			echo &quot;Okay. Goodbye~&quot;
+			echo &#34;Okay. Goodbye~&#34;
 			exit 0
 		;;
 
@@ -134,18 +150,18 @@ do
 		;;
 	esac
 done
-</code></pre><h3 id="read-用于-文件读取-输入">read 用于 文件读取 输入</h3>
+</code></pre><h2 id="read-用于-文件读取-输入">read 用于 文件读取 输入</h2>
 <p>在while和until中使用read来读取文件。
 举例：</p>
 <p>测试text文件如下：</p>
-<pre><code>[root@host1-docker tmpdir]#more demo.txt 
+<pre tabindex="0"><code>[root@host1-docker tmpdir]#more demo.txt 
 line1a line1b line1c
 line2a line2b line2c
 line3a line3b line3c
 line4a line4b line4c
 line5a line5b line5c
 </code></pre><p>测试在循环中read文件：</p>
-<pre><code>[root@host1-docker tmpdir]#more readFile.sh 
+<pre tabindex="0"><code>[root@host1-docker tmpdir]#more readFile.sh 
 #!/bin/bash -
 [ $# -ne 1 ] &amp;&amp; exit 1
 
@@ -156,10 +172,10 @@ done
 </code></pre><p>这里linux会使用IFS变量座位默认的分隔符, 并不是我们期待的根据每行读取 并 赋值。
 这里和read aaa bbb ccc ddd的效果是一样的。在<code>-p 选项</code> 第一部分中演示过。
 所以这是说得通的行为。
-IFS的默认值是 <!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->  所以空格优先于tab和\n</p>
-<pre><code>[root@host1-docker tmpdir]#set | grep IFS
-IFS=$' \t\n'
-</code></pre><pre><code>[root@host1-docker tmpdir]#./readFile.sh  demo.txt
+IFS的默认值是  p 所以空格优先于tab和\n</p>
+<pre tabindex="0"><code>[root@host1-docker tmpdir]#set | grep IFS
+IFS=$&#39; \t\n&#39;
+</code></pre><pre tabindex="0"><code>[root@host1-docker tmpdir]#./readFile.sh  demo.txt
 line1a
 line1b
 line1c
@@ -169,11 +185,11 @@ line2c
 line3a
 line3b
 ...
-</code></pre><h4 id="安全的备份变量-并-处理-按行读取的问题">安全的备份变量 并 处理 按行读取的问题</h4>
-<pre><code>[root@host1-docker tmpdir]#more readFile.sh 
+</code></pre><h2 id="安全的备份变量-并-处理-按行读取的问题">安全的备份变量 并 处理 按行读取的问题</h2>
+<pre tabindex="0"><code>[root@host1-docker tmpdir]#more readFile.sh 
 #!/bin/bash -
 IFS_Bak=$IFS
-IFS=$'\n'   &lt;&lt; 这里重新定义了IFS的意义。只使用 新行 作为分隔，因此每次循环均是一整行。这里注意 $ 和 单引号.
+IFS=$&#39;\n&#39;   &lt;&lt; 这里重新定义了IFS的意义。只使用 新行 作为分隔，因此每次循环均是一整行。这里注意 $ 和 单引号.
 [ $# -ne 1 ] &amp;&amp; exit 1
 
 for line in $(cat $1)
@@ -183,7 +199,7 @@ done
 
 IFS=$IFS_Bak
 </code></pre><p>最终效果：</p>
-<pre><code>[root@host1-docker tmpdir]#./readFile.sh demo.txt 
+<pre tabindex="0"><code>[root@host1-docker tmpdir]#./readFile.sh demo.txt 
 line1a line1b line1c
 line2a line2b line2c
 line3a line3b line3c
@@ -196,13 +212,13 @@ line5a line5b line5c
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Bruce Liu avatar" src="/img/avatar.jpg" class="avatar" height="90" width="90">
+		<img alt="Bruce Liu(Yu-Xuan Liu) avatar" src="/img/photo.jpg" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
-		<span class="authorbox__name">About Bruce Liu</span>
+		<span class="authorbox__name">About Bruce Liu(Yu-Xuan Liu)</span>
 	</div>
 	<div class="authorbox__description">
-		Everything Here.
+		CCIE# 46764, CKA, AWS, Cloud, CloudNative, Networking, EKS, Kubernetes, Istio, Service Mesh, ECS, Golang, Life, Dublin, Ireland.
 	</div>
 </div>
 
@@ -223,14 +239,14 @@ line5a line5b line5c
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2020 Yuxuan Liu.
+			&copy; 2024 Bruce Liu.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
-<script src="/js/custom.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
 </body>
 </html>

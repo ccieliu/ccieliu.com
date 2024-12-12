@@ -1,51 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</title>
-    <link>/categories/</link>
-    <description>Recent content in Categories on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Categories on KUBES, CODE, CHASE</title>
+    <link>//localhost:1313/categories/</link>
+    <description>Recent content in Categories on KUBES, CODE, CHASE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 15 Sep 2020 02:48:53 +0800</lastBuildDate>
-    
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kubernetes</title>
-      <link>/categories/kubernetes/</link>
+      <link>//localhost:1313/categories/kubernetes/</link>
       <pubDate>Tue, 15 Sep 2020 02:48:53 +0800</pubDate>
-      
-      <guid>/categories/kubernetes/</guid>
+      <guid>//localhost:1313/categories/kubernetes/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Linux</title>
-      <link>/categories/linux/</link>
+      <link>//localhost:1313/categories/linux/</link>
       <pubDate>Tue, 15 Sep 2020 01:29:58 +0800</pubDate>
-      
-      <guid>/categories/linux/</guid>
+      <guid>//localhost:1313/categories/linux/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Others</title>
-      <link>/categories/others/</link>
+      <link>//localhost:1313/categories/others/</link>
       <pubDate>Mon, 14 Sep 2020 21:44:10 +0800</pubDate>
-      
-      <guid>/categories/others/</guid>
+      <guid>//localhost:1313/categories/others/</guid>
       <description></description>
     </item>
-    
-    <item>
-      <title>Networking</title>
-      <link>/categories/networking/</link>
-      <pubDate>Mon, 21 Aug 2017 00:00:00 +0000</pubDate>
-      
-      <guid>/categories/networking/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

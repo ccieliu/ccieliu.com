@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Endpoint 详解 - Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</title>
+	<title>Endpoint 详解 - KUBES, CODE, CHASE</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Endpoint 详解" />
-<meta property="og:description" content="Kubernetes EndPoint 详解。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/kubernetes/endpoint/" />
-<meta property="article:published_time" content="2020-09-15T02:48:53+08:00" />
-<meta property="article:modified_time" content="2020-09-15T02:48:53+08:00" />
+		<meta property="og:url" content="//localhost:1313/kubernetes/endpoint/">
+  <meta property="og:site_name" content="KUBES, CODE, CHASE">
+  <meta property="og:title" content="Endpoint 详解">
+  <meta property="og:description" content="Kubernetes EndPoint 详解。">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="kubernetes">
+    <meta property="article:published_time" content="2020-09-15T02:48:53+08:00">
+    <meta property="article:modified_time" content="2020-09-15T02:48:53+08:00">
 
-		<meta itemprop="name" content="Endpoint 详解">
-<meta itemprop="description" content="Kubernetes EndPoint 详解。">
-<meta itemprop="datePublished" content="2020-09-15T02:48:53+08:00" />
-<meta itemprop="dateModified" content="2020-09-15T02:48:53+08:00" />
-<meta itemprop="wordCount" content="143">
-
-
-
-<meta itemprop="keywords" content="" />
-
+		
+  <meta itemprop="name" content="Endpoint 详解">
+  <meta itemprop="description" content="Kubernetes EndPoint 详解。">
+  <meta itemprop="datePublished" content="2020-09-15T02:48:53+08:00">
+  <meta itemprop="dateModified" content="2020-09-15T02:48:53+08:00">
+  <meta itemprop="wordCount" content="143">
+  <meta itemprop="keywords" content="Kubernetes">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/custom.css">
+	
 
 	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		
 </head>
 <body class="body">
@@ -41,10 +41,10 @@
 	<div class="container header__container">
 		
 	<div class="logo">
-		<a class="logo__link" href="/" title="Yuxuan Liu&#39;s Blog" rel="home">
+		<a class="logo__link" href="/" title="KUBES, CODE, CHASE" rel="home">
 			<div class="logo__item logo__text">
-					<div class="logo__title">Yuxuan Liu&#39;s Blog</div>
-					<div class="logo__tagline">Everything Here.</div>
+					<div class="logo__title">KUBES, CODE, CHASE</div>
+					<div class="logo__tagline">I can approve of those only who seek in tears for happiness.</div>
 				</div>
 		</a>
 	</div>
@@ -57,14 +57,14 @@
 		<li class="menu__item">
 			<a class="menu__link" href="/">
 				
-				<span class="menu__text">index</span>
+				<span class="menu__text">Index</span>
 				
 			</a>
 		</li>
 		<li class="menu__item">
 			<a class="menu__link" href="/about/">
 				
-				<span class="menu__text">About Me</span>
+				<span class="menu__text">About</span>
 				
 			</a>
 		</li>
@@ -81,14 +81,42 @@
 		<header class="post__header">
 			<h1 class="post__title">Endpoint 详解</h1>
 			<div class="post__meta meta"><div class="meta__item-author meta__item">
-	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 12 16"><path d="M6 1c2.2 0 3.5 2 3.5 4.5C9.5 7 8.9 8.2 8 9c2.9.8 4 2.5 4 5v1H0v-1c0-2.5 1.1-4.2 4-5-.9-.8-1.5-2-1.5-3.5C2.5 3 3.8 1 6 1z"/></svg><span class="meta__text">Bruce Liu</span>
+	<svg class="meta__icon icon icon-author" width="16" height="16" viewBox="0 0 16 16"><path d="M8 1c2 0 3.5 2 3.5 4.5S10 9 10 9c3 1 4 2 4 6H2c0-4 1-5 4-6 0 0-1.5-1-1.5-3.5S6 1 8 1"/></svg><span class="meta__text">Bruce Liu(Yu-Xuan Liu)</span>
 </div>
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-09-15T02:48:53&#43;08:00">2020-09-15</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/kubernetes/" rel="category">Kubernetes</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2020-09-15T02:48:53&#43;08:00">2020-09-15</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/kubernetes/" rel="category">Kubernetes</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
-			<h4 id="whats-endpoint">What&rsquo;s Endpoint</h4>
+		</header>
+		
+<div class="post__toc toc">
+	<div class="toc__title">Page content</div>
+	<div class="toc__menu">
+		<nav id="TableOfContents">
+  <ul>
+    <li><a href="#whats-endpoint">What&rsquo;s Endpoint</a>
+      <ul>
+        <li><a href="#关于服务外部服务的问题">关于服务/外部服务的问题</a></li>
+      </ul>
+    </li>
+    <li><a href="#手动创建endpoint">手动创建Endpoint</a>
+      <ul>
+        <li><a href="#endpoint和service如何关联">Endpoint和service如何关联？</a></li>
+      </ul>
+    </li>
+    <li><a href="#为外部服务创建别名cname-dns">为外部服务创建别名（CNAME DNS）</a>
+      <ul>
+        <li><a href="#需求">需求</a></li>
+        <li><a href="#原理">原理</a></li>
+        <li><a href="#yaml-example">yaml example:</a></li>
+        <li><a href="#效果">效果</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+	</div>
+</div><div class="content post__content clearfix">
+			<h2 id="whats-endpoint">What&rsquo;s Endpoint</h2>
 <ul>
 <li>Service和Pod 并没有直接相连。</li>
 <li>Service和Pod 之间还有个Endpoint资源</li>
@@ -97,73 +125,73 @@
 <li>如果创建了一个service且不包含pod selector，则需要手动创建Endpoint资源。（如果有pod selector，Endpoint默认会自动创建的）</li>
 <li>这里其实可以创建external service。</li>
 </ul>
-<h5 id="关于服务外部服务的问题">关于服务/外部服务的问题</h5>
+<h3 id="关于服务外部服务的问题">关于服务/外部服务的问题</h3>
 <ul>
 <li>external  service可以利用k8s的负载均衡和服务发现功能</li>
 <li>external service不包含nodeselector，创建service之后直接创建Endpoint来指定地址和port的信息。</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>root@docker-host0 kube<span style="color:#f92672">]</span><span style="color:#75715e"># kubectl get ep</span>
-NAME         ENDPOINTS                                          AGE
-kubernetes   192.168.99.103:8443                                5h53m
-kubia        172.17.0.10:8080,172.17.0.8:8080,172.17.0.9:8080   107m
-
-<span style="color:#f92672">[</span>root@docker-host0 kube<span style="color:#f92672">]</span><span style="color:#75715e"># kubectl describe svc kubia</span>
-Name:              kubia
-Namespace:         default
-Labels:            &lt;none&gt;
-Annotations:       &lt;none&gt;
-Selector:          app<span style="color:#f92672">=</span>kubia
-Type:              ClusterIP
-IP:                10.110.84.76
-Port:              &lt;unset&gt;  80/TCP
-TargetPort:        8080/TCP
-Endpoints:         172.17.0.10:8080,172.17.0.8:8080,172.17.0.9:8080
-Session Affinity:  None
-Events:            &lt;none&gt;
-</code></pre></div><h4 id="手动创建endpoint">手动创建Endpoint</h4>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">apiVersion</span>: v1
-<span style="color:#66d9ef">kind</span>: Endpoints
-<span style="color:#66d9ef">metadata</span>:
-  <span style="color:#66d9ef">name</span>: external-service        <span style="color:#75715e">#&lt;&lt;&lt; 这里的名字必须和service一样，才能彼此关联</span>
-<span style="color:#66d9ef">subsets</span>:
-  - <span style="color:#66d9ef">addresses</span>:
-    - <span style="color:#66d9ef">ip</span>: <span style="color:#ae81ff">11.11.11.11</span>
-    - <span style="color:#66d9ef">ip</span>: <span style="color:#ae81ff">22.22.22.22</span>
-    <span style="color:#66d9ef">ports</span>:
-    - <span style="color:#66d9ef">port</span>: <span style="color:#ae81ff">80</span> 
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>root@docker-host0 kube<span style="color:#f92672">]</span><span style="color:#75715e"># kubectl get ep</span>
+</span></span><span style="display:flex;"><span>NAME         ENDPOINTS                                          AGE
+</span></span><span style="display:flex;"><span>kubernetes   192.168.99.103:8443                                5h53m
+</span></span><span style="display:flex;"><span>kubia        172.17.0.10:8080,172.17.0.8:8080,172.17.0.9:8080   107m
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>root@docker-host0 kube<span style="color:#f92672">]</span><span style="color:#75715e"># kubectl describe svc kubia</span>
+</span></span><span style="display:flex;"><span>Name:              kubia
+</span></span><span style="display:flex;"><span>Namespace:         default
+</span></span><span style="display:flex;"><span>Labels:            &lt;none&gt;
+</span></span><span style="display:flex;"><span>Annotations:       &lt;none&gt;
+</span></span><span style="display:flex;"><span>Selector:          app<span style="color:#f92672">=</span>kubia
+</span></span><span style="display:flex;"><span>Type:              ClusterIP
+</span></span><span style="display:flex;"><span>IP:                10.110.84.76
+</span></span><span style="display:flex;"><span>Port:              &lt;unset&gt;  80/TCP
+</span></span><span style="display:flex;"><span>TargetPort:        8080/TCP
+</span></span><span style="display:flex;"><span>Endpoints:         172.17.0.10:8080,172.17.0.8:8080,172.17.0.9:8080
+</span></span><span style="display:flex;"><span>Session Affinity:  None
+</span></span><span style="display:flex;"><span>Events:            &lt;none&gt;
+</span></span></code></pre></div><h2 id="手动创建endpoint">手动创建Endpoint</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Endpoints</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">external-service       </span> <span style="color:#75715e">#&lt;&lt;&lt; 这里的名字必须和service一样，才能彼此关联</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">subsets</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">addresses</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">ip</span>: <span style="color:#ae81ff">11.11.11.11</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">ip</span>: <span style="color:#ae81ff">22.22.22.22</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span> 
+</span></span></code></pre></div><ul>
 <li>为了方便内部Pod访问外部服务，完全可以在k8s中创建一个服务，关联Endpoint来暴露外部服务</li>
 <li>效果图如下所示：
-<img src="/images/cc6e23a557ce8f2fb7067cc5c6b29b6c.png" alt="cc6e23a557ce8f2fb7067cc5c6b29b6c.png"></li>
+<img src="ep.png" alt="cc6e23a557ce8f2fb7067cc5c6b29b6c.png"></li>
 </ul>
-<h5 id="endpoint和service如何关联">Endpoint和service如何关联？</h5>
+<h3 id="endpoint和service如何关联">Endpoint和service如何关联？</h3>
 <ul>
 <li>endpoint 的 name必须和service相同，彼此才能关联。</li>
 <li>默认情况下service会自动创建一个同名的Endpoint来映射服务和pod的ip port。</li>
 </ul>
-<h4 id="为外部服务创建别名cname-dns">为外部服务创建别名（CNAME DNS）</h4>
-<h5 id="需求">需求</h5>
+<h2 id="为外部服务创建别名cname-dns">为外部服务创建别名（CNAME DNS）</h2>
+<h3 id="需求">需求</h3>
 <ul>
 <li>例如公网有一个api server 地址为： api.example.com</li>
 <li>Pods可能会使用这个api server</li>
 <li>Pods使用这个api server的时候希望使用内部domain(hostname)进行访问</li>
 </ul>
-<h5 id="原理">原理</h5>
+<h3 id="原理">原理</h3>
 <ul>
 <li>在k8s的内部dns服务中，添加了一条指向外部服务的cname记录</li>
 <li>例如映射 external-api-server到 api.example.com上</li>
 </ul>
-<h5 id="yaml-example">yaml example:</h5>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">apiVersion</span>: v1
-<span style="color:#66d9ef">kind</span>: Service
-<span style="color:#66d9ef">metadata</span>:
-  <span style="color:#66d9ef">name</span>: external-api-server
-<span style="color:#66d9ef">spec</span>:
-  <span style="color:#66d9ef">type</span>: ExternalName            <span style="color:#75715e">#&lt;&lt;&lt; 这里是关键字，默认情况下 service type是ClusterIP，因为会有selector和Endpoint</span>
-  <span style="color:#66d9ef">externalName</span>: api.example.com
-  <span style="color:#66d9ef">ports</span>:
-  - <span style="color:#66d9ef">port</span>: <span style="color:#ae81ff">80</span>
-</code></pre></div><h5 id="效果">效果</h5>
+<h3 id="yaml-example">yaml example:</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">v1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Service</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">metadata</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">external-api-server</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spec</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">type</span>: <span style="color:#ae81ff">ExternalName           </span> <span style="color:#75715e">#&lt;&lt;&lt; 这里是关键字，默认情况下 service type是ClusterIP，因为会有selector和Endpoint</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">externalName</span>: <span style="color:#ae81ff">api.example.com</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+</span></span></code></pre></div><h3 id="效果">效果</h3>
 <ul>
 <li>这时候，Pods可以像使用内部service一样使用这个external service</li>
 <li>方便了后续的api地址修改或者替换。</li>
@@ -176,13 +204,13 @@ Events:            &lt;none&gt;
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Bruce Liu avatar" src="/img/avatar.jpg" class="avatar" height="90" width="90">
+		<img alt="Bruce Liu(Yu-Xuan Liu) avatar" src="/img/photo.jpg" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
-		<span class="authorbox__name">About Bruce Liu</span>
+		<span class="authorbox__name">About Bruce Liu(Yu-Xuan Liu)</span>
 	</div>
 	<div class="authorbox__description">
-		Everything Here.
+		CCIE# 46764, CKA, AWS, Cloud, CloudNative, Networking, EKS, Kubernetes, Istio, Service Mesh, ECS, Golang, Life, Dublin, Ireland.
 	</div>
 </div>
 
@@ -203,14 +231,14 @@ Events:            &lt;none&gt;
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2020 Yuxuan Liu.
+			&copy; 2024 Bruce Liu.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
 </footer>
 	</div>
 <script async defer src="/js/menu.js"></script>
-<script src="/js/custom.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML" async></script>
 </body>
 </html>

@@ -1,0 +1,91 @@
+baseurl = "/"
+title = "KUBES, CODE, CHASE"
+languageCode = "en-us"
+theme = "mainroad"
+publishdir = "docs"
+[services.disqus]
+  shortname = "" # Enable Disqus by entering your Disqus shortname
+
+[services.googleAnalytics]
+  ID = "" # Enable Google Analytics by entering your tracking ID
+
+[pagination]
+  pagerSize = 10
+
+[menus]
+  [[menus.main]]
+    name = 'Index'
+    pageRef = '/index'
+    weight = 1
+  [[menus.main]]
+    name = 'About'
+    pageRef = '/about'
+    weight = 0
+
+[Params]
+  description = "Bruce Liu(Yu-Xuan Liu)'s Blog. - CCIE# 46764, CKA, AWS, Cloud, CloudNative, Networking, EKS, Kubernetes, Istio, Service Mesh, ECS, Golang, Life, Dublin, Ireland." # Site description. Used in meta description
+  copyright = "Bruce Liu" # Footer copyright holder, otherwise will use site title
+  opengraph = true # Enable OpenGraph if true
+  schema = true # Enable Schema
+  twitter_cards = false # Enable Twitter Cards if true
+  readmore = true # Show "Read more" button in list if true
+  authorbox = true # Show authorbox at bottom of pages if true
+  toc = true # Enable Table of Contents
+  pager = true # Show pager navigation (prev/next links) at the bottom of pages if true
+  post_meta = ["author", "date", "categories"] # Order of post meta information
+  mainSections = ["kubernetes", "linux", "netowrking","others"] # Specify section pages to show on home page and the "Recent articles" widget
+  dateformat = "2006-01-02" # Change the format of dates
+  mathjax = true # Enable MathJax
+  mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js" # Specify MathJax path
+  mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
+  googleFontsLink = "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" # Load Google Fonts
+
+[Params.Author] # Used in authorbox
+  name = "Bruce Liu(Yu-Xuan Liu)"
+  bio = "CCIE# 46764, CKA, AWS, Cloud, CloudNative, Networking, EKS, Kubernetes, Istio, Service Mesh, ECS, Golang, Life, Dublin, Ireland."
+  avatar = "img/photo.jpg"
+
+[Params.style.vars]
+  highlightColor = "#e22d30" # Override highlight color
+
+  # Override font-family sets
+  # Take care of different quotes OR escaping symbols in these params if necessary
+  fontFamilyPrimary = "'Open Sans', Helvetica, Arial, sans-serif"
+  # Secondary font-family set responsible for pre, code, kbd, and samp tags font
+  fontFamilySecondary = "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+
+[Params.logo]
+  # image = "img/placeholder.png" # Logo image. Path relative to "static"
+  title = "KUBES, CODE, CHASE" # Logo title, otherwise will use site title
+  subtitle = "I can approve of those only who seek in tears for happiness." # Logo subtitle
+
+[Params.thumbnail]
+  visibility = ["list", "post"] # Control thumbnail visibility
+
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "right"  # Configure layout for list pages
+  single = false # Configure layout for single pages
+  # Enable widgets in given order
+  widgets = ["search", "categories","recent", "taglist", "social"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  categories_counter = true # Enable counter for each category in "Categories" widget
+  tags_counter = true # Enable counter for each tag in "Tags" widget
+
+[Params.widgets.social]
+  cached = false # activate cache if true
+  # Enable parts of social widget
+  instagram = "ccieliu"
+  linkedin = "ccieliu"
+  telegram = "ccieliu"
+  github = "ccieliu"
+  email = "ccieliu@gmail.com"
+
+[Params.widgets.search]
+  cached = false # activate cache if true
+  url = "https://google.com/search"
+  [Params.widgets.search.input]
+    name = "sitesearch"
+    pre = ""

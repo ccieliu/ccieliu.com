@@ -1,60 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on Yuxuan Liu - Cloud Native | Open Source | Community | Linux | Networking</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Tags on KUBES, CODE, CHASE</title>
+    <link>//localhost:1313/tags/</link>
+    <description>Recent content in Tags on KUBES, CODE, CHASE</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 14 Sep 2020 21:44:10 +0800</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>About</title>
-      <link>/tags/about/</link>
-      <pubDate>Mon, 14 Sep 2020 21:44:10 +0800</pubDate>
-      
-      <guid>/tags/about/</guid>
-      <description></description>
-    </item>
-    
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker</title>
-      <link>/tags/docker/</link>
+      <link>//localhost:1313/tags/docker/</link>
       <pubDate>Mon, 14 Sep 2020 21:44:10 +0800</pubDate>
-      
-      <guid>/tags/docker/</guid>
+      <guid>//localhost:1313/tags/docker/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Kubernetes</title>
-      <link>/tags/kubernetes/</link>
+      <link>//localhost:1313/tags/kubernetes/</link>
       <pubDate>Mon, 14 Sep 2020 21:44:10 +0800</pubDate>
-      
-      <guid>/tags/kubernetes/</guid>
+      <guid>//localhost:1313/tags/kubernetes/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Linux</title>
-      <link>/tags/linux/</link>
+      <link>//localhost:1313/tags/linux/</link>
       <pubDate>Mon, 14 Sep 2020 21:44:10 +0800</pubDate>
-      
-      <guid>/tags/linux/</guid>
+      <guid>//localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Networking</title>
-      <link>/tags/networking/</link>
+      <link>//localhost:1313/tags/networking/</link>
       <pubDate>Mon, 14 Sep 2020 21:44:10 +0800</pubDate>
-      
-      <guid>/tags/networking/</guid>
+      <guid>//localhost:1313/tags/networking/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

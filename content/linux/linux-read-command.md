@@ -4,15 +4,15 @@ date: 2020-09-15T01:03:21+08:00
 draft: true
 summary: Linux shell 用 "read" 输入 读取 标准输出 或 文件。
 categories:
-  - "Linux"
+  - "linux"
 ---
 
-### read 输入
+## read 输入
 用read 输入 读取 标准输出 或 文件。
 
 ---
 
-#### -p 选项
+## -p 选项
 弹出提示符。其他的参数会一次赋值。例如下：
 
 ```
@@ -27,7 +27,7 @@ bbb
 [root@host1-docker tmpdir]#echo $c
 ccc
 ```
-#### -s 选项  用于密码
+## -s 选项  用于密码
 输入无回显，通常用于用户输入密码。
 但是-s可能会导致下一个read在同行显示。
 workaround:
@@ -36,7 +36,7 @@ workaround:
 read -s -p "Please input your name: " myname ; echo
 ```
 
-#### 匹配默认值，互交界面
+## 匹配默认值，互交界面
 ```
 #!/bin/bash -
 read -p "Please input your name: " myname
@@ -65,7 +65,7 @@ done
 ```
 
 
-### read 用于 文件读取 输入
+## read 用于 文件读取 输入
 在while和until中使用read来读取文件。
 举例：
 
@@ -94,7 +94,7 @@ done
 这里linux会使用IFS变量座位默认的分隔符, 并不是我们期待的根据每行读取 并 赋值。
 这里和read aaa bbb ccc ddd的效果是一样的。在`-p 选项` 第一部分中演示过。
 所以这是说得通的行为。
-IFS的默认值是 <space><tab><newline>  所以空格优先于tab和\n
+IFS的默认值是  p 所以空格优先于tab和\n
 
 ```
 [root@host1-docker tmpdir]#set | grep IFS
@@ -113,7 +113,7 @@ line3b
 ...
 ```
 
-#### 安全的备份变量 并 处理 按行读取的问题
+## 安全的备份变量 并 处理 按行读取的问题
 ```
 [root@host1-docker tmpdir]#more readFile.sh 
 #!/bin/bash -
