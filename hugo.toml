@@ -60,7 +60,7 @@ publishdir = "docs"
   subtitle = "I can approve of those only who seek in tears for happiness." # Logo subtitle
 
 [Params.thumbnail]
-  visibility = ["list", "post"] # Control thumbnail visibility
+  visibility = ["list"] # Control thumbnail visibility
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
