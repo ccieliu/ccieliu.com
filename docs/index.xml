@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>KUBES, CODE, CHASE</title>
-    <link>//localhost:1313/</link>
+    <link>/</link>
     <description>Recent content on KUBES, CODE, CHASE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>【2024】这一年，我狂按人生加速键。</title>
-      <link>//localhost:1313/others/my-2024/</link>
+      <link>/others/my-2024/</link>
       <pubDate>Fri, 13 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/others/my-2024/</guid>
+      <guid>/others/my-2024/</guid>
       <description>北京到上海，上海到都柏林，从结婚到移民。我狂按人生加速按钮,终于获得了自由与平静。这一年真的实在是是太酷了！都说三十而立，我在29岁的最后几个月中，完成了35岁之前的目标。一切比想象中的更顺利，比想象中的更完美。愿我们在2025中也一样顺利，落地生根。</description>
     </item>
     <item>
       <title>Endpoint 详解</title>
-      <link>//localhost:1313/kubernetes/endpoint/</link>
+      <link>/kubernetes/endpoint/</link>
       <pubDate>Tue, 15 Sep 2020 02:48:53 +0800</pubDate>
-      <guid>//localhost:1313/kubernetes/endpoint/</guid>
+      <guid>/kubernetes/endpoint/</guid>
       <description>Kubernetes EndPoint 详解。</description>
     </item>
     <item>
       <title>Kubernetes Service</title>
-      <link>//localhost:1313/kubernetes/service/</link>
+      <link>/kubernetes/service/</link>
       <pubDate>Tue, 15 Sep 2020 01:50:39 +0800</pubDate>
-      <guid>//localhost:1313/kubernetes/service/</guid>
+      <guid>/kubernetes/service/</guid>
       <description>Kubernetes 中 Service 解决了什么问题?</description>
     </item>
     <item>
       <title>Kubectl Get</title>
-      <link>//localhost:1313/kubernetes/kubectl-get/</link>
+      <link>/kubernetes/kubectl-get/</link>
       <pubDate>Tue, 15 Sep 2020 01:35:03 +0800</pubDate>
-      <guid>//localhost:1313/kubernetes/kubectl-get/</guid>
+      <guid>/kubernetes/kubectl-get/</guid>
       <description>Kubectl get 相关lab测试与集锦</description>
     </item>
     <item>
       <title>Linux Shell Redirect</title>
-      <link>//localhost:1313/linux/linux-shell-redirect/</link>
+      <link>/linux/linux-shell-redirect/</link>
       <pubDate>Tue, 15 Sep 2020 01:29:58 +0800</pubDate>
-      <guid>//localhost:1313/linux/linux-shell-redirect/</guid>
+      <guid>/linux/linux-shell-redirect/</guid>
       <description>Linux shell 输出 输入 错误  以及各种重定向.</description>
     </item>
     <item>
       <title>Linux Read Command</title>
-      <link>//localhost:1313/linux/linux-read-command/</link>
+      <link>/linux/linux-read-command/</link>
       <pubDate>Tue, 15 Sep 2020 01:03:21 +0800</pubDate>
-      <guid>//localhost:1313/linux/linux-read-command/</guid>
+      <guid>/linux/linux-read-command/</guid>
       <description>Linux shell 用 &amp;ldquo;read&amp;rdquo; 输入 读取 标准输出 或 文件。</description>
     </item>
     <item>
       <title>Hello World</title>
-      <link>//localhost:1313/others/hello-world/</link>
+      <link>/others/hello-world/</link>
       <pubDate>Mon, 14 Sep 2020 21:44:10 +0800</pubDate>
-      <guid>//localhost:1313/others/hello-world/</guid>
+      <guid>/others/hello-world/</guid>
       <description>&lt;p&gt;Back to blog.&lt;/p&gt;</description>
     </item>
   </channel>

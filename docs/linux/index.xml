@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linuxes on KUBES, CODE, CHASE</title>
-    <link>//localhost:1313/linux/</link>
+    <link>/linux/</link>
     <description>Recent content in Linuxes on KUBES, CODE, CHASE</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 15 Sep 2020 01:29:58 +0800</lastBuildDate>
-    <atom:link href="//localhost:1313/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Shell Redirect</title>
-      <link>//localhost:1313/linux/linux-shell-redirect/</link>
+      <link>/linux/linux-shell-redirect/</link>
       <pubDate>Tue, 15 Sep 2020 01:29:58 +0800</pubDate>
-      <guid>//localhost:1313/linux/linux-shell-redirect/</guid>
+      <guid>/linux/linux-shell-redirect/</guid>
       <description>Linux shell 输出 输入 错误  以及各种重定向.</description>
     </item>
     <item>
       <title>Linux Read Command</title>
-      <link>//localhost:1313/linux/linux-read-command/</link>
+      <link>/linux/linux-read-command/</link>
       <pubDate>Tue, 15 Sep 2020 01:03:21 +0800</pubDate>
-      <guid>//localhost:1313/linux/linux-read-command/</guid>
+      <guid>/linux/linux-read-command/</guid>
       <description>Linux shell 用 &amp;ldquo;read&amp;rdquo; 输入 读取 标准输出 或 文件。</description>
     </item>
   </channel>
